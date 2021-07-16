@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchCityWeather } from './store/slices/city';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCityWeather({lat:  20.676667, lon: -103.3475}));
+  });
   return (
     <div className="App">
       <header className="App-header">
