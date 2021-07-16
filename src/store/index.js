@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import daysReducers from './slices/city'
+import reducer from './slices/city'
 
 export const store = configureStore({
-  reducer: daysReducers,
+  reducer,
 })

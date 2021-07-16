@@ -1,0 +1,70 @@
+.Root {
+  position: relative;
+  max-width: 400px;
+}
+
+.Field {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 13px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  padding-right: 35px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.Toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #cce;
+  width: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.Label {
+  font-size: 10px;
+  margin: 0 15px;
+}
+
+.Dropdown {
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  transition: all .3s linear;
+  visibility: visible;
+  overflow: hidden;
+  margin-top: 2px;
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 10%);
+  z-index: 2;
+}
+
+.Dropdown:not(.Active) {
+  opacity: 0;
+  top: 50%;
+  visibility: hidden;
+}
+
+.Item {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.Item:hover,
+.Item.Selected {
+  background: rgba(214, 214, 214, 0.5);
+}

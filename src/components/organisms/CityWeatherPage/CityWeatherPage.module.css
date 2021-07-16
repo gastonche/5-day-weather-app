@@ -1,0 +1,9 @@
+.Days {
+  margin-top: 30px;
+  display: flex;
+  overflow: auto;
+}
+
+.Graph {
+  margin-top: 20px;
+}
