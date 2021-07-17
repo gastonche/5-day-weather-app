@@ -5,6 +5,8 @@ It's a sample weather app built using [ReactJs](https://reactjs.org/) with weath
 
 ![preview](public/images/preview.png)
 
+[SITE DEMO](https://infallible-darwin-8946b0.netlify.app/)
+
 ## Project Setup
 
 In order to setup and run this project locally, you should follow these steps
