@@ -9,8 +9,8 @@ const statusValues = Object.freeze({
 
 const initialState = {
   status: statusValues.LOADING,
-  data: {},
-  selectedDay: null,
+  days: [],
+  selectedDay: 0,
   cityLoaded: false,
   city: 0,
 };
@@ -27,6 +27,7 @@ export const citySlice = createSlice({
     setCity(state, action) {
       state.city = action.payload;
       state.cityLoaded = false;
+      state.selectedDay = 0;
     },
     setCurrentDay(state, action) {
       state.selectedDay = action.payload;
@@ -38,10 +39,9 @@ export const citySlice = createSlice({
         state.status = statusValues.LOADING;
       })
       .addCase(fetchCityWeather.fulfilled, (state, action) => {
-        state.data = action.payload;
-        state.cityLoaded = true;
+        state.days = action.payload;
         state.status = statusValues.LOADED;
-        state.selectedDay = state.data.current;
+        state.cityLoaded = true;
       })
       .addCase(fetchCityWeather.rejected, (state) => {
         state.status = statusValues.ERROR;
@@ -55,13 +55,9 @@ export const loadingSelector = (state) =>
   state.status === statusValues.LOADING && !state.cityLoaded;
 
 export const daysSelector = (state) => {
-  return [state.data?.current, ...(state.data?.daily || []).slice(1, 5)]
-    .filter(Boolean)
-    .map((day) => ({
-      ...day,
-      temp: Math.floor(day.temp?.max || day.temp),
-      selected: day.dt === state.selectedDay.dt,
-    }));
+  return state.days.map((day, index) => ({...day, selected: index === state.selectedDay}));
 };
+
+export const hoursSelector = (state) => state.days[state.selectedDay]?.hours;
 
 export default citySlice.reducer;

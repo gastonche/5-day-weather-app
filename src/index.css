@@ -7,6 +7,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* CSS variables */
+  --accent-color: #cce;
+  --primay-background-color: blanchedalmond;
+  --secondary-background-color: #fff;
+  --border-radius: 10px;
 }
 
 code {

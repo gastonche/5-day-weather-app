@@ -4,8 +4,8 @@
 }
 
 .Field {
-  background: #fff;
-  border-radius: 10px;
+  background: var(--secondary-background-color);
+  border-radius: var(--border-radius);
   border: 1px solid #ccc;
   padding: 10px 15px;
   font-size: 13px;
@@ -22,7 +22,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: #cce;
+  background: var(--accent-color);
   width: 30px;
   height: 100%;
   display: flex;
@@ -38,8 +38,8 @@
 }
 
 .Dropdown {
-  background: #fff;
-  border-radius: 5px;
+  background: var(--secondary-background-color);
+  border-radius: var(--border-radius);
   position: absolute;
   top: 100%;
   left: 0;

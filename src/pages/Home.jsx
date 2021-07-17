@@ -4,6 +4,7 @@ import CityWeatherPage from "../components/organisms/CityWeatherPage/CityWeather
 import {
   daysSelector,
   fetchCityWeather,
+  hoursSelector,
   loadingSelector,
   setCity,
   setCurrentDay
@@ -38,6 +39,7 @@ const Home = () => {
   );
   const loading = useSelector((state) => loadingSelector(state));
   const days = useSelector(state => daysSelector(state));
+  const hours = useSelector(state => hoursSelector(state));
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -54,6 +56,7 @@ const Home = () => {
     <CityWeatherPage
       cities={cities}
       days={days}
+      hours={hours}
       selectedCity={city.id}
       loading={loading}
       onCityChange={(id) => dispatch(setCity(id))}

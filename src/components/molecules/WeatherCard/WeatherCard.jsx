@@ -2,6 +2,7 @@ import classNames from "classnames";
 import React, { Fragment } from "react";
 import { getDay } from "../../../utils/date";
 import WeatherIcon from "../../atoms/WeatherIcon";
+import Loading from "./Loading";
 import classes from "./WeatherCard.module.css";
 
 const WeatherCard = (props) => {
@@ -19,21 +20,19 @@ const WeatherCard = (props) => {
   );
 };
 
-const Loading = () => <div className={classes.Loading}>loading...</div>;
-
 const Card = (props) => {
   return (
     <Fragment>
       <span className={classes.date}>{getDay(props.dt)}</span>
       <WeatherIcon
-        icon={props.weather[0].icon}
-        weather={props.weather[0].main}
+        icon={props.weather.icon}
+        weather={props.weather.main}
       />
       <span className={classes.temp}>
         {props.temp}&deg;<span>C</span>
       </span>
-      <p className={classes.description} title={props.weather[0].main}>
-        {props.weather[0].description}
+      <p className={classes.description} title={props.weather.main}>
+        {props.weather.description}
       </p>
     </Fragment>
   );

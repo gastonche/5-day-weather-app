@@ -1,5 +1,5 @@
 .App {
-  background-color: blanchedalmond;
+  background-color: var(--primay-background-color);
 }
 
 .container {

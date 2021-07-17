@@ -1,0 +1,10 @@
+.TemperatureGraph {
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-background-color);
+}
+
+.TemperatureGraph.Loading {
+  padding: 0;
+  height: 500px;
+}

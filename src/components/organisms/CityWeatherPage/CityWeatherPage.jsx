@@ -1,5 +1,6 @@
 import React from "react";
 import SelectField from "../../atoms/SelectField/SelectField";
+import TemperatureGraph from "../../molecules/TemperatureGraph/TemperatureGraph";
 import WeatherCard from "../../molecules/WeatherCard/WeatherCard";
 import classes from "./CityWeatherPage.module.css";
 
@@ -22,11 +23,13 @@ const CityWeatherPage = (props) => {
             day={day}
             key={props.loading ? index : day.dt}
             loading={props.loading}
-            onSelected={props.onDaySelected}
+            onSelected={() => props.onDaySelected(index)}
           />
         ))}
       </section>
-      <section className={classes.Graph}>selected day</section>
+      <section className={classes.Graph}>
+        <TemperatureGraph loading={props.loading} hours={props.hours} />
+      </section>
     </main>
   );
 };
