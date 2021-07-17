@@ -3,6 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 It's a sample weather app built using [ReactJs](https://reactjs.org/) with weather data gotten from [Open Weather Data App](https://openweathermap.org/)
 
+![preview](public/images/preview.png)
+
 ## Project Setup
 
 In order to setup and run this project locally, you should follow these steps
