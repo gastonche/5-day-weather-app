@@ -58,6 +58,6 @@ export const daysSelector = (state) => {
   return state.days.map((day, index) => ({...day, selected: index === state.selectedDay}));
 };
 
-export const hoursSelector = (state) => state.days[state.selectedDay]?.hours;
+export const hoursSelector = (state) => state.days[state.selectedDay]?.hours || [];
 
 export default citySlice.reducer;

@@ -8,14 +8,15 @@ import classes from "./WeatherCard.module.css";
 const WeatherCard = (props) => {
   return (
     <article
+      data-test-id="card"
       className={classNames({
         [classes.Card]: true,
-        [classes.Selected]: props.day.selected,
+        [classes.Selected]: props.day?.selected,
         [classes.Loading]: props.loading,
       })}
       onClick={() => props.onSelected(props.day)}
     >
-      {props.loading ? <Loading /> : <Card {...props.day} />}
+      {props.loading || !props.day ? <Loading /> : <Card {...props.day} />}
     </article>
   );
 };

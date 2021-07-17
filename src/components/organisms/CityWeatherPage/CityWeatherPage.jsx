@@ -14,7 +14,7 @@ const CityWeatherPage = (props) => {
           value={props.selectedCity}
           onChange={props.onCityChange}
         >
-          Choose a City
+          Select a City
         </SelectField>
       </header>
       <section className={classes.Days}>

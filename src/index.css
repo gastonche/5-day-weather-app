@@ -9,10 +9,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   /* CSS variables */
-  --accent-color: #cce;
-  --primay-background-color: blanchedalmond;
+  --accent-color: #00AFB9;
+  --primay-background-color: #0081A7;
   --secondary-background-color: #fff;
   --border-radius: 10px;
+  --primary-text-color: #fff;
+  --secondary-text-color: #000;
 }
 
 code {
