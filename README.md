@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# About 5 Day Weather App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It's a sample weather app built using [ReactJs](https://reactjs.org/) with weather data gotten from [Open Weather Data App](https://openweathermap.org/)
+
+## Project Setup
+
+In order to setup and run this project locally, you should follow these steps
+
+- Clone the repository to your local environment
+- copy the `env.example` file and rename it to `env.local`
+- Add your weather app API key and set is as the value for the `REACT_APP_API_KEY` property
+- The run the following commands
+  1. `yarn install`
+  1. `yarn start`
 
 ## Available Scripts
 
@@ -44,10 +56,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ### Analyzing the Bundle Size
 

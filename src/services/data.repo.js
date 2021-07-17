@@ -13,7 +13,7 @@ export async function fetchCityWeatherData({lat, lon, units = 'imperial'}) {
     acc[date] = {
       ...hour,
       date,
-      hours: [...acc[date]?.hours || [], hour]
+      hours: [...(acc[date]?.hours || []), hour]
     }
 
     return acc;
